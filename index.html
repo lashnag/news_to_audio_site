@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewsToAudioBot 🎙️ — Stay Informed, Hands-Free</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="./assets/style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container nav-content">
+            <a href="#" class="logo">NewsToAudioBot 🎙️</a>
+            <ul class="nav-links">
+                <li><a href="#features">Возможности</a></li>
+                <li><a href="#how-it-works">Как это работает</a></li>
+                <li><a href="#faq">Вопросы и ответы</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1>Будьте в&nbsp;курсе, не&nbsp;отвлекаясь от&nbsp;дел</h1>
+                <p>Ваш Telegram-бот, который зачитывает новости из проверенных источников вслух — пока вы ведёте машину,
+                    готовите или занимаетесь другими делами.</p>
+                <div class="cta-buttons">
+                    <a href="https://t.me/news_to_audo_bot" class="btn btn-primary" target="_blank">▶ Добавить в
+                        Telegram</a>
+                    <button class="btn btn-secondary" id="demo-button">▶ Слушать демо</button>
+                    <audio src="./assets/demo.ogg" id="demo-audio"></audio>
+                </div>
+                <div class="trust-badges">
+                    <div class="badge">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
+                        Без рекламы
+                    </div>
+                    <div class="badge">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
+                        </svg>
+                        Конфиденциальность прежде всего
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title">Как это работает</h2>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">①</div>
+                    <h3>Подпишитесь</h3>
+                    <p>Нажмите /create_subscription в&nbsp;Telegram.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">②</div>
+                    <h3>Выберите источники</h3>
+                    <p>Выберите любимые новостные каналы и настройте предпочтения.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">③</div>
+                    <h3>Слушайте где угодно</h3>
+                    <p>Аудио воспроизводится в фоновом режиме, пока вы занимаетесь другими делами.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+        <div class="container">
+            <h2 class="section-title">Основные возможности</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔊</div>
+                    <h3>Голосовые сводки на основе ИИ</h3>
+                    <p>Естественное текстовое преобразование в речь</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📰</div>
+                    <h3>Поддержка множества каналов</h3>
+                    <p>Мировые, местные новости и любые блогеры</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎙️</div>
+                    <h3>Озвучка любым голосом</h3>
+                    <p>Выбирайте из готовых или настройте по своему вкусу</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Ориентирован на многозадачность</h3>
+                    <p>Разработан для тех, кто выполняет несколько задач одновременно</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <h2 class="section-title">Демо в реальном времени</h2>
+            <div class="audio-player">
+                <h3>Примеры голосов</h3>
+                <div class="player-controls">
+                    <button class="btn btn-primary play-btn" id="woman-button">Женский</button>
+                    <audio src="./assets/woman.ogg" id="woman-sample"></audio>
+                    <button class="btn btn-primary play-btn" id="man-button">Мужской</button>
+                    <audio src="./assets/man.ogg" id="man-sample"></audio>
+                </div>
+                <p style="margin-top: 20px; color: var(--text-muted);">💡 Совет: Eщё больше примеров в чате Telegram!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Часто задаваемые вопросы</h2>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Как начать пользоваться NewsToAudioBot?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Просто нажмите «Добавить в Telegram», введите /create_subscription и следуйте быстрой настройке.
+                    Электронная почта
+                    и регистрация не требуются.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Могу ли я настроить, какие новости я слышу?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Да! Следуйте инструкциям по настройке и добавьте те каналы, которые вам интересны.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Конфиденциальны ли мои данные?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Безусловно. Мы никогда не храним ваши сообщения, предпочтения сохраняются только в вашем Telegram, а
+                    аудио генерируется по запросу.
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    Что делать, если мне не нравится голос?
+                    <span>+</span>
+                </div>
+                <div class="faq-answer">
+                    Настройте подписку на нужные каналы заново, выбрав понравившийся голос из примеров
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <div class="container">
+            <h2>🎧 Готовы слушать новости?</h2>
+            <p>Присоединяйтесь</p>
+            <a href="https://t.me/news_to_audo_bot" target="_blank" class="btn btn-primary">▶ Добавить NewsToAudioBot в
+                Telegram</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-muted);">Без банковской карты • Без
+                регистрации • Настройка за 30 секунд</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>NewsToAudioBot 🎙️</h3>
+                    <p>Ваш голосовой помощник.<br />Будьте в&nbsp;курсе событий, живя полной жизнью.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Продукт</h4>
+                    <ul>
+                        <li><a href="#features">Возможности</a></li>
+                        <li><a href="#how-it-works">Как это работает</a></li>
+                        <li><a href="#demo">Демо</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Поддержка</h4>
+                    <ul>
+                        <li><a href="#faq">Вопросы и ответы</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>NewsToAudioBot 🎙️ © 2026 • Все права защищены</p>
+                <p style="margin-top: 10px;">*NewsToAudioBot — независимый бот. Весь новостной контент принадлежит
+                    соответствующим издателям.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="./assets/script.js"></script>
+
+</body>
+
+</html>
