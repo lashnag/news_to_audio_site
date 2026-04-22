@@ -13,15 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
-
-                console.log(target)
-
             if (target) {
                 target.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
-
 
     const womanAudio = document.getElementById("woman-sample");
     const womanButton = document.getElementById("woman-button");
@@ -33,11 +29,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const defaultWomanButtonContent = womanButton.textContent;
     const defaultManBtnContent = manButton.textContent;
     const defaultExampleBtnContent = exampleButton.textContent;
+    const pauseLabel = womanButton.dataset.pause || "Pause";
+    const stopLabel = exampleButton.dataset.stop || "Stop ⏹";
 
-     exampleButton.addEventListener("click", function () {
+    exampleButton.addEventListener("click", function () {
         if (exampleAudio.paused) {
             exampleAudio.play();
-            exampleButton.innerHTML = "Остановить прослушивание &#9208;";
+            exampleButton.textContent = stopLabel;
 
             manAudio.pause();
             womanAudio.pause();
@@ -53,19 +51,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     womanButton.addEventListener("click", function () {
         if (womanAudio.paused) {
-            womanButton.classList.add('play-btn-active')
+            womanButton.classList.add('play-btn-active');
             womanAudio.play();
-            womanButton.textContent = "Пауза";
+            womanButton.textContent = pauseLabel;
 
             manAudio.pause();
             exampleAudio.pause();
             manButton.textContent = defaultManBtnContent;
             exampleButton.textContent = defaultExampleBtnContent;
-            manButton.classList.remove('play-btn-active')
-
+            manButton.classList.remove('play-btn-active');
         } else {
             womanAudio.pause();
-            womanButton.classList.remove('play-btn-active')
+            womanButton.classList.remove('play-btn-active');
             womanButton.textContent = defaultWomanButtonContent;
         }
     });
@@ -75,16 +72,16 @@ document.addEventListener('DOMContentLoaded', function () {
             manAudio.play();
 
             womanAudio.pause();
-            manButton.classList.add('play-btn-active')
-            womanButton.classList.remove('play-btn-active')
+            manButton.classList.add('play-btn-active');
+            womanButton.classList.remove('play-btn-active');
             exampleButton.textContent = defaultExampleBtnContent;
             exampleAudio.pause();
 
-            manButton.textContent = "Пауза";
+            manButton.textContent = pauseLabel;
             womanButton.textContent = defaultWomanButtonContent;
         } else {
             manAudio.pause();
-            manButton.classList.remove('play-btn-active')
+            manButton.classList.remove('play-btn-active');
             manButton.textContent = defaultManBtnContent;
         }
     });
