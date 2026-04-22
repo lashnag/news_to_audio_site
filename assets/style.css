@@ -296,14 +296,24 @@
  }
 
  .example-btn {
-    background-color: transparent;
-    border: none;
-    border-bottom: 1px solid var(--text-muted);
-    color: var(--text-light);
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(59, 130, 246, 0.1);
+    border: 1px solid rgba(59, 130, 246, 0.35);
+    color: var(--accent-blue);
     cursor: pointer;
-    margin-top: 10px;
-    font-size: 0.8rem;
-    line-height: 1rem;
+    margin-top: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: background 0.2s, border-color 0.2s;
+ }
+
+ .example-btn:hover {
+    background: rgba(59, 130, 246, 0.2);
+    border-color: var(--accent-blue);
  }
 
  /* FAQ */
