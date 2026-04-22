@@ -28,13 +28,16 @@
             <div class="hero-text">
                 <h1>Будьте в&nbsp;курсе, не&nbsp;отвлекаясь от&nbsp;дел</h1>
                 <p>Ваш Telegram-бот, который зачитывает новости из проверенных источников вслух — пока вы ведёте машину,
-                    готовите или занимаетесь другими делами.</p>
+                    готовите или занимаетесь другими делами</p>
+                <a href="https://t.me/news_to_audo_bot" class="btn btn-primary fly-btn" target="_blank">Добавить в
+                    Telegram</a>
                 <div class="cta-buttons">
-                    <a href="https://t.me/news_to_audo_bot" class="btn btn-primary" target="_blank">▶ Добавить в
-                        Telegram</a>
-                    <button class="btn btn-secondary" id="demo-button">▶ Слушать демо</button>
-                    <audio src="./assets/demo.ogg" id="demo-audio"></audio>
+                    <button class="btn btn-secondary" id="woman-button">▶ Слушать демо 1</button>
+                    <audio src="./assets/woman.ogg" id="woman-sample"></audio>
+                    <button class="btn btn-secondary" id="man-button">▶ Слушать демо 2</button>
+                    <audio src="./assets/man.ogg" id="man-sample"></audio>
                 </div>
+
                 <div class="trust-badges">
                     <div class="badge">
                         <svg viewBox="0 0 24 24">
@@ -46,7 +49,7 @@
                         <svg viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" />
                         </svg>
-                        Конфиденциальность прежде всего
+                        Бесплатный в базовой версии
                     </div>
                 </div>
             </div>
@@ -61,17 +64,17 @@
                 <div class="step-card">
                     <div class="step-number">①</div>
                     <h3>Подпишитесь</h3>
-                    <p>Нажмите /create_subscription в&nbsp;Telegram.</p>
+                    <p>Нажмите /create_subscription в&nbsp;Telegram</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">②</div>
                     <h3>Выберите источники</h3>
-                    <p>Выберите любимые новостные каналы и настройте предпочтения.</p>
+                    <p>Выберите любимые новостные каналы и настройте предпочтения</p>
                 </div>
                 <div class="step-card">
                     <div class="step-number">③</div>
                     <h3>Слушайте где угодно</h3>
-                    <p>Аудио воспроизводится в фоновом режиме, пока вы занимаетесь другими делами.</p>
+                    <p>Аудио воспроизводится в фоновом режиме, пока вы занимаетесь другими делами</p>
                 </div>
             </div>
         </div>
@@ -80,12 +83,12 @@
     <!-- Features -->
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title">Основные возможности</h2>
+            <h2 class="section-title">Возможности</h2>
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔊</div>
                     <h3>Голосовые сводки на основе ИИ</h3>
-                    <p>Естественное текстовое преобразование в речь</p>
+                    <p>Качественные голоса для преобразования текста в речь</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📰</div>
@@ -95,31 +98,15 @@
                 <div class="feature-card">
                     <div class="feature-icon">🎙️</div>
                     <h3>Озвучка любым голосом</h3>
-                    <p>Выбирайте из готовых или настройте по своему вкусу</p>
+                    <p>Озвучивайте голосом любимого актера, блогера или своего друга</p>
+                    <button class="example-btn" id="example-button" type="button">Прослушать пример озвучки &#9658;</button>
+                    <audio src="./assets/demo.ogg" id="example-sample"></audio>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
                     <h3>Ориентирован на многозадачность</h3>
                     <p>Разработан для тех, кто выполняет несколько задач одновременно</p>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Demo Section -->
-    <section class="demo" id="demo">
-        <div class="container">
-            <h2 class="section-title">Демо в реальном времени</h2>
-            <div class="audio-player">
-                <h3>Примеры голосов</h3>
-                <div class="player-controls">
-                    <button class="btn btn-primary play-btn" id="woman-button">Женский</button>
-                    <audio src="./assets/woman.ogg" id="woman-sample"></audio>
-                    <button class="btn btn-primary play-btn" id="man-button">Мужской</button>
-                    <audio src="./assets/man.ogg" id="man-sample"></audio>
-                </div>
-                <p style="margin-top: 20px; color: var(--text-muted);">💡 Совет: Eщё больше примеров в чате Telegram!
-                </p>
             </div>
         </div>
     </section>
@@ -135,8 +122,7 @@
                 </div>
                 <div class="faq-answer">
                     Просто нажмите «Добавить в Telegram», введите /create_subscription и следуйте быстрой настройке.
-                    Электронная почта
-                    и регистрация не требуются.
+                    Электронная почта и регистрация не требуются
                 </div>
             </div>
             <div class="faq-item">
@@ -145,17 +131,16 @@
                     <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    Да! Следуйте инструкциям по настройке и добавьте те каналы, которые вам интересны.
+                    Да! Следуйте инструкциям по настройке и добавьте те каналы, которые вам интересны
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    Конфиденциальны ли мои данные?
+                    Это платно?
                     <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    Безусловно. Мы никогда не храним ваши сообщения, предпочтения сохраняются только в вашем Telegram, а
-                    аудио генерируется по запросу.
+                    Нет, базовая версия предусматривает озвучку из одного канала бесплатно
                 </div>
             </div>
             <div class="faq-item">
@@ -164,7 +149,7 @@
                     <span>+</span>
                 </div>
                 <div class="faq-answer">
-                    Настройте подписку на нужные каналы заново, выбрав понравившийся голос из примеров
+                    Для использования уникального голоса нужна аудиозапись на 20 секунд с примером речи
                 </div>
             </div>
         </div>
@@ -174,7 +159,6 @@
     <section class="final-cta">
         <div class="container">
             <h2>🎧 Готовы слушать новости?</h2>
-            <p>Присоединяйтесь</p>
             <a href="https://t.me/news_to_audo_bot" target="_blank" class="btn btn-primary">▶ Добавить NewsToAudioBot в
                 Telegram</a>
             <p style="margin-top: 20px; font-size: 0.9rem; color: var(--text-muted);">Без банковской карты • Без
